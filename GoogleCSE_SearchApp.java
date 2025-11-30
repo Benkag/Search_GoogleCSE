@@ -588,19 +588,17 @@ private void toast(String msg) {
 
  private static class GradientHeader extends JPanel {
     GradientHeader() {
-        setOpaque(false); // quan trọng
+        setOpaque(false); 
     }
 
     @Override
     protected void paintComponent(Graphics g) {
-        super.paintComponent(g); // gọi trước
+        super.paintComponent(g); 
 
         Graphics2D g2 = (Graphics2D) g.create();
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
         int w = getWidth(), h = getHeight();
-
-        // Gradient đậm hơn để chữ trắng nổi rõ
         Color c1 = new Color(12, 74, 110);
         Color c2 = new Color(2, 132, 199);
 
